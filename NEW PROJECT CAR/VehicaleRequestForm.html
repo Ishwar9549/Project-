@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Inquiry Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<style>
+    body {
+        background-color: #f8f9fa;
+    }
+    .container {
+        max-width: 600px;
+        background: white;
+        padding: 20px;
+        margin-top: 50px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    }
+    .form-group {
+        margin-bottom: 15px;
+    }
+    .submit-btn {
+        background-color: #007bff;
+        color: white;
+        font-weight: bold;
+    }
+    .submit-btn:hover {
+        background-color: #0056b3;
+    }
+    nav {
+            font-size: x-large;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+</style>
+
+<body style="background-image: url(images/image8.png); background-repeat: no-repeat; background-size: cover;">
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Car Dealer</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="User_Profile.html">Profile</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Main_Page.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Settings</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login_page.html">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <h3 class="text-center text-primary mb-4">Tell Us What You Need</h3>
+
+        <form id="customerForm">
+            <!-- Vehicle Type -->
+            <div class="form-group">
+                <label for="vehicleType"><strong>Vehicle Type:</strong></label>
+                <select class="form-control" id="vehicleType"  >
+                    <option value= >Select Vehicle Type</option>
+                    <option value="Car">Car</option>
+                    <option value="Bike">Bike</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <!-- Brand -->
+            <div class="form-group">
+                <label for="brand"><strong>Brand:</strong></label>
+                <input type="text" class="form-control" id="brand" placeholder="Enter brand (e.g., Toyota, Honda)">
+            </div>
+
+            <!-- Model -->
+            <div class="form-group">
+                <label for="model"><strong>Model:</strong></label>
+                <input type="text" class="form-control" id="model" placeholder="Enter model (e.g., Fortuner, Activa)">
+            </div>
+
+            <!-- Budget Range -->
+            <div class="form-group">
+                <label for="budget"><strong>Budget Range:</strong></label>
+                <select class="form-control" id="budget">
+                    <option value= >Select Budget</option>
+                    <option value="Below ₹1 Lakh">Below ₹1 Lakh</option>
+                    <option value="₹1 - ₹5 Lakhs">₹1 - ₹5 Lakhs</option>
+                    <option value="₹5 - ₹10 Lakhs">₹5 - ₹10 Lakhs</option>
+                    <option value="₹10 - ₹20 Lakhs">₹10 - ₹20 Lakhs</option>
+                    <option value="Above ₹20 Lakhs">Above ₹20 Lakhs</option>
+                </select>
+            </div>
+
+            <!-- Fuel Type -->
+            <div class="form-group">
+                <label for="fuelType"><strong>Fuel Type:</strong></label>
+                <select class="form-control" id="fuelType">
+                    <option value= >Select Fuel Type</option>
+                    <option value="Petrol">Petrol</option>
+                    <option value="Diesel">Diesel</option>
+                    <option value="Electric">Electric</option>
+                    <option value="Hybrid">Hybrid</option>
+                </select>
+            </div>
+
+            <hr>
+
+            <!-- Customer Details -->
+            <h5 class="text-primary">Your Contact Details</h5>
+
+            <div class="form-group">
+                <label for="name"><strong>Name:</strong></label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name"  >
+            </div>
+
+            <div class="form-group">
+                <label for="phone"><strong>Phone Number:</strong></label>
+                <input type="text" class="form-control" id="phone" placeholder="Enter your phone number"  >
+            </div>
+
+            <div class="form-group">
+                <label for="email"><strong>Email Address:</strong></label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email"  >
+            </div>
+
+            <div class="form-group">
+                <label for="location"><strong>Location:</strong></label>
+                <input type="text" class="form-control" id="location" placeholder="Enter your city">
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn submit-btn w-100 mt-3">Submit Request</button>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+
+    <!-- JavaScript for Popup -->
+    <script>
+        document.getElementById("customerForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent actual form submission
+
+    // Show alert popup
+    alert("Thank you! Our team will analyze your request. Once we find a suitable match, we will reach out to you.");
+
+    // Redirect to a new page after clicking OK
+    window.location.href = "Main_Page.html"; // Change this to your desired page
+
+    // Optional: Reset form after submission (Not needed if redirecting)
+    document.getElementById("customerForm").reset();
+});
+
+    </script>
+
+</body>
+</html>

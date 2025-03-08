@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+    .content {
+        flex-grow: 1;
+        overflow-y: auto;
+        padding: 20px;
+    }
+    footer {
+        text-align: center;
+        padding: 10px;
+        background-color: black;
+        color: white;
+    }
+    .payment-option i {
+        font-size: 24px;
+        margin-right: 8px;
+        color: #007bff;
+    }
+    .details-section {
+        display: none;
+        background: #f8f9fa;
+        padding: 15px;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+    nav {
+        font-size: x-large;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+</style>
+
+<body>
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Car Dealer</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="User_Profile.html">Profile</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Main_Page.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Settings</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login_page.html">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Scrollable Content -->
+    <div class="container content mt-4">
+        <div class="card shadow-lg p-4">
+            <h2 class="text-center text-primary mb-4">Proceed to Booking or Purchase</h2>
+
+            <form id="paymentForm" action="Payment_Gate_Waya page.html">
+                <div class="mb-3">
+                    <label class="form-label"><strong>Do you want to book or buy?</strong></label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="actionType" id="book" value="book" required>
+                        <label class="form-check-label" for="book">Book Vehicle</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="actionType" id="buy" value="buy">
+                        <label class="form-check-label" for="buy">Buy Vehicle</label>
+                    </div>
+                </div>
+
+                <!-- Booking Details -->
+                <div id="bookingDetails" class="details-section">
+                    <h5>Vehicle Booking Details</h5>
+                    <p><strong>Car Model:</strong> Honda City ZX</p>
+                    <p><strong>Price:</strong> ₹14,00,000</p>
+                    <p><strong>Booking Amount:</strong> ₹50,000</p>
+                    <p>Please pay the booking amount to reserve your vehicle.</p>
+                    <button type="submit" class="btn btn-primary">Pay ₹50,000</button>
+                </div>
+
+                <!-- Buying Payment Option -->
+                <div id="buyOptions" class="details-section">
+                    <label class="form-label"><strong>Select Payment Option:</strong></label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="paymentMethod" id="fullPayment" value="full">
+                        <label class="form-check-label" for="fullPayment">Full Payment</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="paymentMethod" id="finance" value="finance">
+                        <label class="form-check-label" for="finance">Finance Required (Loan Processing)</label>
+                    </div>
+                </div>
+
+                <!-- Full Payment Details -->
+                <div id="fullPaymentDetails" class="details-section">
+                    <h5>Full Payment Details</h5>
+                    <p><strong>Car Model:</strong> Honda City ZX</p>
+                    <p><strong>Total Price:</strong> ₹14,00,000</p>
+                    <button type="submit" class="btn btn-success">Pay ₹14,00,000</button>
+                </div>
+
+                <!-- Finance Payment Details -->
+                <div id="financeDetails" class="details-section">
+                    <h5>Finance Option Details</h5>
+                    <p><strong>Car Model:</strong> Honda City ZX</p>
+                    <p><strong>Total Price:</strong> ₹14,00,000</p>
+                    <p><strong>Loan Required:</strong> Yes</p>
+                    <a href="Contact_Finace.html" class="btn btn-warning">Contact Finance Agents</a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Car Dealer. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('input[name="actionType"]').forEach(input => {
+            input.addEventListener("change", function() {
+                let bookingDetails = document.getElementById("bookingDetails");
+                let buyOptions = document.getElementById("buyOptions");
+                let fullPaymentDetails = document.getElementById("fullPaymentDetails");
+                let financeDetails = document.getElementById("financeDetails");
+
+                if (this.value === "book") {
+                    bookingDetails.style.display = "block";
+                    buyOptions.style.display = "none";
+                    fullPaymentDetails.style.display = "none";
+                    financeDetails.style.display = "none";
+                } else {
+                    bookingDetails.style.display = "none";
+                    buyOptions.style.display = "block";
+                    fullPaymentDetails.style.display = "none";
+                    financeDetails.style.display = "none";
+                }
+            });
+        });
+
+        document.querySelectorAll('input[name="paymentMethod"]').forEach(input => {
+            input.addEventListener("change", function() {
+                let fullPaymentDetails = document.getElementById("fullPaymentDetails");
+                let financeDetails = document.getElementById("financeDetails");
+
+                if (this.value === "full") {
+                    fullPaymentDetails.style.display = "block";
+                    financeDetails.style.display = "none";
+                } else {
+                    fullPaymentDetails.style.display = "none";
+                    financeDetails.style.display = "block";
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

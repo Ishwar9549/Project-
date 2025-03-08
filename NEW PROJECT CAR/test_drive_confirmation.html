@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Drive Confirmation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        nav {
+            font-size: x-large;
+        }
+
+        /* Fix Header */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        /* Fix Footer */
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            padding: 10px 0;
+            background-color: #212529;
+            color: white;
+        }
+
+        /* Scrollable Content */
+        .content {
+            margin-top: 80px;
+            /* Space for fixed navbar */
+            margin-bottom: 60px;
+            /* Space for fixed footer */
+            padding: 20px;
+            height: calc(100vh - 140px);
+            /* Adjust height for scrolling */
+            overflow-y: auto;
+        }
+    </style>
+</head>
+
+<body style="background-image: url(images/image7.png); background-repeat: no-repeat; background-size: cover;">
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Car Dealer</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="User_Profile.html">Profile</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Main_Page.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Settings</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login_page.html">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Scrollable Content -->
+    <div class="content" >
+        <div class="container" >
+            <div class="card shadow-lg p-4">
+                <h2 class="text-center text-success mb-4">Test Drive Confirmed!</h2>
+                <p class="text-center">Thank you for booking a test drive. Here are your details:</p>
+
+                <div class="row">
+                    <div class="col-md-6"><strong>Full Name:</strong> <span id="fullName">John Doe</span></div>
+                    <div class="col-md-6"><strong>Contact Number:</strong> <span id="contactNumber">+91
+                            9876543210</span></div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="col-md-6"><strong>Alternative Contact:</strong> <span id="altContactNumber">N/A</span>
+                    </div>
+                    <div class="col-md-6"><strong>Test Drive Date:</strong> <span id="testDriveDate">2025-03-10</span>
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="col-md-6"><strong>Test Drive Time:</strong> <span id="testDriveTime">10:30 AM</span>
+                    </div>
+                    <div class="col-md-6"><strong>Additional Message:</strong> <span id="message">Looking forward to the
+                            drive!</span></div>
+                </div>
+
+                <div class="text-center mt-4">
+                    <p class="text-success fw-bold">Our team will contact you soon to confirm the details.</p>
+                    <a href="User_Profile.html" class="btn btn-primary m-2" style="width: 85%;">Back to Profile</a>
+                    <a href="Old_vehicle_Purchase_Available_list.html" style="width:85%" class="btn btn-secondary m-2">View More Vehicles</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark">
+        <p>&copy; 2025 Car Dealer. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

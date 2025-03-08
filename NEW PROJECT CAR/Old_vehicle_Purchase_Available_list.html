@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Vehicles</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Make body and html take full height */
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Fixed Header */
+        nav {
+            font-size: x-large;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        /* Fixed Footer */
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* Scrollable Content */
+        .content-wrapper {
+            flex: 1;
+            overflow-y: auto;
+            margin-top: 70px; /* Space for fixed header */
+            margin-bottom: 50px; /* Space for fixed footer */
+            padding: 20px;
+        }
+    </style>
+</head>
+<body style="background-image: url(images/image8.png); background-repeat: no-repeat; background-size: cover;">
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Car Dealer</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="User_Profile.html">Profile</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Main_Page.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Settings</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login_page.html">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Scrollable Content -->
+    <div class="content-wrapper" >
+        <div class="container" >
+            <h2 class="text-center mb-4">Available Vehicles</h2>
+
+            <div class="row">
+                <!-- Vehicle 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/image.png" class="card-img-top" alt="Vehicle Image">
+                        <div class="card-body">
+                            <h5 class="card-title">Toyota Corolla</h5>
+                            <p class="card-text">
+                                <strong>Fuel Type:</strong> Petrol <br>
+                                <strong>Year:</strong> 2021 <br>
+                                <strong>Condition:</strong> Excellent
+                            </p>
+                            <a href="Contact_For_test_drive.html" class="btn btn-primary w-100"> Contact for Test Drive</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vehicle 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/image.png" class="card-img-top" alt="Vehicle Image">
+                        <div class="card-body">
+                            <h5 class="card-title">Royal Enfield Classic 350</h5>
+                            <p class="card-text">
+                                <strong>Fuel Type:</strong> Petrol <br>
+                                <strong>Year:</strong> 2019 <br>
+                                <strong>Condition:</strong> Good
+                            </p>
+                            <a href="Contact_For_test_drive.html" class="btn btn-primary w-100"> Contact for Test Drive</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vehicle 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/image.png" class="card-img-top" alt="Vehicle Image">
+                        <div class="card-body">
+                            <h5 class="card-title">Tesla Model 3</h5>
+                            <p class="card-text">
+                                <strong>Fuel Type:</strong> Electric <br>
+                                <strong>Year:</strong> 2022 <br>
+                                <strong>Condition:</strong> Excellent
+                            </p>
+                            <a href="Contact_For_test_drive.html" class="btn btn-primary w-100"> Contact for Test Drive</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Back Button -->
+            <div class="text-center mt-4">
+                <a href="VehicaleRequestForm.html" class="btn btn-success">If You Not Found Any Match </a>
+                <a href="Old_Vehicle_Purchace_Form.html" class="btn btn-warning">Back to Requirement Page</a>
+            </div>
+        </div>  
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Car Dealer. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

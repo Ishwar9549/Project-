@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Drive Booking</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+        }
+        nav, footer {
+            flex-shrink: 0;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #343a40;
+            color: aliceblue;
+        }
+        nav {
+            font-size: x-large;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Car Dealer</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="User_Profile.html">Profile</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Main_Page.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Settings</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login_page.html">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Scrollable Content -->
+    <div class="content" style="background-image: url(images/image7.png); background-repeat: no-repeat; background-size: cover;">
+        <div class="container p-4" style="background-color: white; box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.3);">
+            <h2 class="text-center mb-4">Book a Test Drive</h2>
+            <form action="test_drive_confirmation.html">
+                <div class="mb-3">
+                    <label for="fullName" class="form-label">Full Name</label>
+                    <input type="text" class="form-control" id="fullName" name="fullName">
+                </div>
+                <div class="mb-3">
+                    <label for="contactNumber" class="form-label">Contact Number</label>
+                    <input type="tel" class="form-control" id="contactNumber" name="contactNumber">
+                </div>
+                <div class="mb-3">
+                    <label for="altContactNumber" class="form-label">Alternative Contact Number</label>
+                    <input type="tel" class="form-control" id="altContactNumber" name="altContactNumber">
+                </div>
+                <div class="mb-3">
+                    <label for="testDriveDate" class="form-label">Preferred Test Drive Date</label>
+                    <input type="date" class="form-control" id="testDriveDate" name="testDriveDate">
+                </div>
+                <div class="mb-3">
+                    <label for="testDriveTime" class="form-label">Preferred Test Drive Time</label>
+                    <input type="time" class="form-control" id="testDriveTime" name="testDriveTime">
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Additional Message (Optional)</label>
+                    <textarea class="form-control" id="message" name="message" rows="3"></textarea>
+                </div>
+                <div class="text-center mb-3">
+                    <button type="button" class="btn btn-primary w-100">Selected Vehicle Details</button>
+                </div>
+                <div class="container text-center" >
+                    <button type="submit" class="btn btn-success m-2" style="width: 85%;">Book Test Drive</button>
+                    <a style="width: 85%;" href="Old_vehicle_Purchase_Available_list.html" class="btn btn-secondary m-2">Back to Available Vehicles</a>
+                </div>
+            </form>
+        </div>
+   
+    </div>
+
+    <!-- Footer -->
+    <footer class="navbar navbar-dark bg-dark">
+        <p class="m-0 w-100">&copy; 2025 Car Dealer. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

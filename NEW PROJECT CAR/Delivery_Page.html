@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Finished - Customer View</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        background-color: #f8f9fa;
+    }
+    .content {
+        flex-grow: 1;
+        padding: 20px;
+    }
+    .delivery-card {
+        background: white;
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    .status-completed {
+        background: #28a745;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+    .agent-info {
+        margin-top: 10px;
+        padding: 10px;
+        background: #f1f1f1;
+        border-radius: 5px;
+    }
+    footer {
+        text-align: center;
+        padding: 10px;
+        background-color: black;
+        color: white;
+    }      nav {
+        font-size: x-large;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+</style>
+
+<body>
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Customer Delivery Status</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="Main_Page.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Support</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login_page.html">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Delivery Details Content -->
+    <div class="container content">
+        <h2 class="text-center text-primary mb-4">Your Car Delivery Details</h2>
+
+        <!-- Customer Delivery Info -->
+        <div class="delivery-card">
+            <h5><i class="fas fa-car"></i> Car Model: Toyota Fortuner</h5>
+            <p><strong>Customer:</strong> Rajesh Kumar</p>
+            <p><strong>Delivery Date & Time:</strong> 10th March 2025, 3:00 PM</p>
+            <p><strong>Delivery Location:</strong> Mumbai, India</p>
+            <p><strong>Invoice Number:</strong> INV20250123</p>
+            <p><strong>Warranty Period:</strong> 3 Years / 50,000 km</p>
+            <span class="status-completed">✔ Delivered</span>
+
+            <div class="">
+                <img src="/images/FinalDel.png" alt="Delivery Image" width="40%">
+            </div>
+
+            <!-- Agent Information -->
+            <div class="agent-info">
+                <h6>🚗 Your Delivery Agent</h6>
+                <p><strong>Name:</strong> Amit Sharma</p>
+                <p><strong>Phone:</strong> +91 98765 43210</p>
+                <p><strong>Email:</strong> amit.sharma@cardealer.com</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Car Dealership Services. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JavaScript (Required for Navbar Toggle) -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>

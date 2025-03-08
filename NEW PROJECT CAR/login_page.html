@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Ensure the full height layout */
+        body, html {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            width: 400px; /* Slightly wider for better spacing */
+        }
+
+        .form-label, h3 {
+            font-size: 1.3rem; /* Increased font size */
+        }
+
+        .form-control {
+            font-size: 1.1rem; /* Input fields slightly larger */
+        }
+
+        /* Fixed Footer */
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand fs-4" href="Main_Page.html">Brand Name</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link fs-5" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link fs-5" >About</a></li>
+                    <li class="nav-item"><a class="nav-link fs-5" >Services</a></li>
+                    <li class="nav-item"><a class="nav-link fs-5" >Contact</a></li>
+                    <li class="nav-item"><a class="nav-link active fs-5" href="User_Register.html">Register</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Login Section -->
+    <div class="content " style="background-image: url(images/image7.png); background-repeat: no-repeat; background-size: cover;" >
+        <div class="card p-4 shadow-lg m-3">
+            <h3 class="text-center mb-3">Login</h3>
+            
+            <!-- Login Form -->
+            <form action="Main_Page.html" >
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email" >
+                </div>
+                
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password:</label>
+                    <input type="password" class="form-control" id="password" placeholder="Enter your password" >
+                </div>
+                
+                <button type="submit" class="btn btn-primary w-100 fs-5">Login</button>
+            </form>
+
+            <div class="text-center mt-3">
+                <a href="" class="d-block text-primary fs-6">Login with OTP</a>
+                <a href="" class="d-block text-danger fs-6">Forgot Password?</a>
+            </div>
+            
+            <!-- Buttons for Navigation -->
+            <div class="text-center mt-3">
+                <a href="User_Register.html" class="btn btn-success w-100 fs-5">Register as New User</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fixed Footer -->
+    <footer class="navbar-dark bg-dark text-white text-center py-3">
+        <p class="mb-0 fs-5">&copy; 2025 Your Company. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

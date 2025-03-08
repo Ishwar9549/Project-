@@ -1,0 +1,129 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Old Vehicle Old_vehicle_Purchase_form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<style>
+nav
+    {
+        font-size: x-large;
+    }
+</style>
+<body style="background-image: url(images/image7.png); background-repeat: no-repeat; background-size: cover;">
+     <!-- Header -->
+     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Car Dealer</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="User_Profile.html">Profile</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Main_Page.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Settings</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login_page.html">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container d-flex justify-content-center align-items-center  mt-4 mb-3" >
+        <div class="card p-4 shadow-lg" style="width: 900px;">
+            <h3 class="text-center mb-3">Provide Vehicle Details</h3>
+
+            <!-- Vehicle Details Form -->
+            <form action="Old_vehicle_Purchase_Available_list.html">
+                <!-- Vehicle Type -->
+                <div class="mb-3">
+                    <label class="form-label">Select Vehicle Type:</label>
+                    <select class="form-select" id="vehicleType"  >
+                        <option value="" disabled selected>Choose vehicle type</option>
+                        <option value="car">Car</option>
+                        <option value="bike">Bike</option>
+                        <option value="other">Other Vehicle</option>
+                    </select>
+                </div>
+
+                <!-- Fuel Type -->
+                <div class="mb-3">
+                    <label class="form-label">Fuel Type:</label>
+                    <select class="form-select" id="fuelType"  >
+                        <option value="" disabled selected>Choose fuel type</option>
+                        <option value="petrol">Petrol</option>
+                        <option value="diesel">Diesel</option>
+                        <option value="electric">Electric</option>
+                    </select>
+                </div>
+
+                <!-- Vehicle Brand -->
+                <div class="mb-3">
+                    <label class="form-label">Vehicle Brand:</label>
+                    <select class="form-select" id="brand"  >
+                        <option value="" disabled selected>Choose vehicle brand</option>
+                        <option value="Toyota">Toyota</option>
+                        <option value="Honda">Honda</option>
+                        <option value="Ford">Ford</option>
+                        <option value="BMW">BMW</option>
+                        <option value="Tesla">Tesla</option>
+                        <option value="Hyundai">Hyundai</option>
+                        <option value="Kawasaki">Kawasaki (Bike)</option>
+                        <option value="Royal Enfield">Royal Enfield (Bike)</option>
+                    </select>
+                </div>
+
+                <!-- Vehicle Model -->
+                <div class="mb-3">
+                    <label for="model" class="form-label">Vehicle Model:</label>
+                    <input type="text" class="form-control" id="model" placeholder="Enter vehicle model"  >
+                </div>
+
+                <!-- Manufacturing Year -->
+                <div class="mb-3">
+                    <label for="year" class="form-label">Manufacturing Year:</label>
+                    <input type="number" class="form-control" id="year" placeholder="Enter year" min="1980" max="2025"  >
+                </div>
+
+                <!-- Kilometer Driven -->
+                <div class="mb-3">
+                    <label for="kmDriven" class="form-label">Kilometers Driven:</label>
+                    <input type="number" class="form-control" id="kmDriven" placeholder="Enter kilometers driven"  >
+                </div>
+
+                <!-- Condition -->
+                <div class="mb-3">
+                    <label class="form-label">Vehicle Condition:</label>
+                    <select class="form-select" id="condition"  >
+                        <option value="" disabled selected>Choose condition</option>
+                        <option value="excellent">Excellent</option>
+                        <option value="good">Good</option>
+                        <option value="average">Average</option>
+                        <option value="needs repair">Needs Repair</option>
+                    </select>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-primary w-100">Submit Details</button>
+            </form>
+
+            <!-- Back Button -->
+            <div class="text-center mt-3">
+                <a href="Main_Page.html" class="btn btn-danger w-100">Back to Main Page</a>
+            </div>
+        </div>
+    </div>
+
+     <!-- Footer -->
+     <footer class="navbar navbar-expand-lg navbar-dark bg-dark " style="color: aliceblue; text-align: center;">
+        <p>&copy; 2025 Car Dealer. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Agents</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        background-color: #f8f9fa;
+    }
+    .content {
+        flex-grow: 1;
+        padding: 20px;
+    }
+    .agent-card {
+        display: flex;
+        align-items: center;
+        background: white;
+        padding: 15px;
+        margin-bottom: 15px;
+        border-radius: 8px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    .agent-card img {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        margin-right: 15px;
+    }
+    .contact-btn {
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    footer {
+        text-align: center;
+        padding: 10px;
+        background-color: black;
+        color: white;
+    }
+    nav {
+        font-size: x-large;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+</style>
+
+<body style="background-image: url(images/image8.png); background-repeat: no-repeat; background-size: cover;">
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Car Dealer</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="User_Profile.html">Profile</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Main_Page.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Settings</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login_page.html">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Finance Agents Content -->
+    <div class="container content">
+        <h2 class="text-center text-primary mb-4">Available Finance Agents</h2>
+
+        <!-- Finance Agent 1 -->
+        <div class="agent-card">
+            <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="Rahul Mehta">
+            <div>
+                <h5>Rahul Mehta</h5>
+                <p><strong>Bank:</strong> ICICI Bank</p>
+                <p><a class="contact-btn text-primary" href="">📞 +91 98765 43210</a></p>
+                <p><a class="contact-btn text-danger" href="">📧 rahul.mehta@icicibank.com</a></p>
+            </div>
+        </div>
+
+        <!-- Finance Agent 2 -->
+        <div class="agent-card">
+            <img src="https://randomuser.me/api/portraits/men/7.jpg" alt="Amit Sharma">
+            <div>
+                <h5>Amit Sharma</h5>
+                <p><strong>Bank:</strong> HDFC Bank</p>
+                <p><a class="contact-btn text-primary" href="">📞 +91 87654 32109</a></p>
+                <p><a class="contact-btn text-danger" href="">📧 amit.sharma@hdfcbank.com</a></p>
+            </div>
+        </div>
+
+        <!-- Finance Agent 3 -->
+        <div class="agent-card">
+            <img src="https://randomuser.me/api/portraits/women/5.jpg" alt="Neha Agarwal">
+            <div>
+                <h5>Neha Agarwal</h5>
+                <p><strong>Bank:</strong> Axis Bank</p>
+                <p><a class="contact-btn text-primary" href="">📞 +91 98123 45678</a></p>
+                <p><a class="contact-btn text-danger" href="">📧 neha.agarwal@axisbank.com</a></p>
+            </div>
+        </div>
+
+        <!-- Finance Agent 4 -->
+        <div class="agent-card">
+            <img src="https://randomuser.me/api/portraits/men/9.jpg" alt="Vikram Singh">
+            <div>
+                <h5>Vikram Singh</h5>
+                <p><strong>Bank:</strong> SBI Bank</p>
+                <p><a class="contact-btn text-primary" href="">📞 +91 97001 23456</a></p>
+                <p><a class="contact-btn text-danger" href="">📧 vikram.singh@sbibank.com</a></p>
+            </div>
+        </div>
+
+        <!-- Finance Agent 5 -->
+        <div class="agent-card">
+            <img src="https://randomuser.me/api/portraits/women/8.jpg" alt="Priya Verma">
+            <div>
+                <h5>Priya Verma</h5>
+                <p><strong>Bank:</strong> Kotak Mahindra Bank</p>
+                <p><a class="contact-btn text-primary" href="">📞 +91 89007 65432</a></p>
+                <p><a class="contact-btn text-danger" href="">📧 priya.verma@kotak.com</a></p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Car Finance Services. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Ensure full-page layout */
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .content-wrapper {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            padding: 20px;
+        }
+
+        .card {
+            width: 900px;
+        }
+
+        .form-label, h3 {
+            font-size: 1.3rem;
+        }
+
+        .form-control {
+            font-size: 1.1rem;
+        }
+
+        /* Fixed Footer */
+        footer {
+            background-color: #dc3545;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Header -->
+    <nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
+        <div class="container" >
+            <a class="navbar-brand fs-4" href="Main_Page.html">Brand Name</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link fs-5" href="/index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link fs-5" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link fs-5" href="#">Services</a></li>
+                    <li class="nav-item"><a class="nav-link fs-5" href="#">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link active fs-5" href="login_page.html">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Wrapper -->
+    <div class="content-wrapper">
+        <!-- Main Registration Section -->
+        <div class="content" style="background-image: url(images/image7.png); background-repeat: no-repeat; background-size: cover;">
+            <div class="card p-4 shadow-lg">
+                <h3 class="text-center mb-3">User Registration</h3>
+
+                <!-- Registration Form -->
+                <form action="login_page.html">
+                    <div class="mb-3">
+                        <label for="fullname" class="form-label">Full Name:</label>
+                        <input type="text" class="form-control" id="fullname" placeholder="Enter your full name">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email:</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Phone Number:</label>
+                        <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Username:</label>
+                        <input type="text" class="form-control" id="username" placeholder="Choose a username">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password:</label>
+                        <input type="password" class="form-control" id="password" placeholder="Enter a password">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="confirm-password" class="form-label">Confirm Password:</label>
+                        <input type="password" class="form-control" id="confirm-password" placeholder="Confirm your password">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Gender:</label>
+                        <div>
+                            <input type="radio" name="gender" value="male" id="male">
+                            <label for="male">Male</label>
+
+                            <input type="radio" name="gender" value="female" id="female" class="ms-3">
+                            <label for="female">Female</label>
+
+                            <input type="radio" name="gender" value="other" id="other" class="ms-3">
+                            <label for="other">Other</label>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="dob" class="form-label">Date of Birth:</label>
+                        <input type="date" class="form-control" id="dob">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="country" class="form-label">Country:</label>
+                        <select class="form-control" id="country">
+                            <option value="">Select Country</option>
+                            <option value="India">India</option>
+                            <option value="USA">USA</option>
+                            <option value="UK">UK</option>
+                            <option value="Canada">Canada</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="address" class="form-label">Address:</label>
+                        <textarea class="form-control" id="address" rows="3" placeholder="Enter your address"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100 fs-5">Register</button>
+                </form>
+
+                <!-- Buttons for Navigation -->
+                <div class="text-center mt-3">
+                    <a href="login_page.html" class="btn btn-secondary w-100 fs-5">Back to Login</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fixed Footer -->
+    <footer class="navbar-dark bg-dark">
+        <p class="mb-0 fs-5">&copy; 2025 Your Company. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
